@@ -14,7 +14,8 @@
       background: transparent;
       transition: all .15s ease-in;
       &:active {
-        background: darken($main-color, 3%);
+//         background: darken($main-color, 3%);
+        background: transparent;
       }
       &:hover {
         background: lighten($main-color, 3%);
