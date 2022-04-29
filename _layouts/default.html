@@ -25,17 +25,20 @@
         <img src="{{ site.baseurl }}/assets/img/avatar.jpg" alt="Picture" title="That's me, {{ site.author }}.">
       </figure>
       <div class="bio">
-          <h1>Hi, I'm {{ site.author }}.</h1>
+          <h1> {{ site.author }}.</h1>
           <p>{{ site.author-bio }}</p>
       </div>
       <nav>
         <h6>Follow me on</h6>
         <ul>
+          {% if site.linkedin %}
+          <li><a target="_blank" href="https://linkedin.com/{{ site.linkedin }}">LinkedIn</a></li>
+          {% endif %}
           {% if site.twitter %}
           <li><a target="_blank" href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
           {% endif %}
           {% if site.github %}
-          <li><a target="_blank" href="https://github.com/{{ site.github }}">Github</a></li>
+          <li><a target="_blank" href="https://github.com/{{ site.github }}">GitHub</a></li>
           {% endif %}
           {% if site.dribbble %}
           <li><a target="_blank" href="https://dribbble.com/{{ site.dribbble }}">Dribbble</a></li>
