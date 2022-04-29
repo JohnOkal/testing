@@ -2,7 +2,7 @@
 name: "John Okal Project Portfolio"
 
 # Description of your content (will only be used on Google Search)
-# description: "Fluid, responsive blog theme for Jekyll"
+description: "John Okal Project Portfolio"
 
 # Your name. Will show in your footer + sidebar
 author: "John Okal"
@@ -11,7 +11,7 @@ url: "http://johnokal.github.io/testing"
 baseurl: "/testing"
 
 # A short presentation of yourself. Will show in the sidebar, under your name. Best usage would be between 30 to 50 words.
-# author-bio: "hello"
+author-bio: "This portfolio showcases some of the projects and tools that I use to work with large amounts of data with Python and SQL as the main languages used."
 
 # Social Accounts (mine, as placeholders)
 
