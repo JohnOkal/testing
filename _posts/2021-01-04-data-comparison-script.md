@@ -80,10 +80,10 @@ y1.to_excel('filepath/name_' + timestr + '.xlsx')
 
 ### **Output**
 The resulting output will look like the below screenshot. I have erased any sensitive data and only included the first 10 rows. A blank value under Yesterday but an active value Today means that data was uploaded yesterday and we can see it reflected in our system of record today.
-![image1](/assets/img/ComparisonOutputClose.PNG)
+![image1]({{site.baseurl}}/assets/img/ComparisonOutputClose.PNG)
 
 The second image shows what the entire file looks like zoomed out. Yellow highlights are data changes.
-![image2](/assets/img/ComparisonOutputFar.PNG)
+![image2]({{site.baseurl}}/assets/img/ComparisonOutputFar.PNG)
 
 ### **Conclusion**
 This is an important first step in identifying changes to data and can be used in a multitude of situations. I've used this to track many different changes over many different time periods. If you can identify what changed then it is easier to implement processes to eliminate changes altogether or to report up and answer the ultimate question that X change because of y, z reasons.
