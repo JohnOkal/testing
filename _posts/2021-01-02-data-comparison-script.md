@@ -6,7 +6,6 @@ Reasons for why data changes are numerous yet managers and executives always won
 ### **Code**
 It is important to note that in order for this code to work, the data structure must remain unchanged from one time period to the next. Column name changes will cause the script to be uncomparable.
 
-First, we import relevant libraries and CSV's. CSV files can be stored locally or in a database.
 ```python
 import pandas as pd
 import numpy as np
@@ -46,7 +45,7 @@ At this point, we have Yesterday's data and Today's data stacked with a new colu
 variable = variable.replace(np.nan, 'None', regex=True)
 variable = variable.sort_values(by='column1').reset_index().set_index(['column1', 'time']).unstack(level=1)
 ```
-This step is important since we just took our 'time' column and placed it under each of the columns we're comparing. For example, column1 may be named AccountName and we have that as the top-level hierarchy with 'Yesterday' and 'Today' as columns below so comparison is easier to see.
+The above step is important since we just took our 'time' column and placed it under each of the columns we're comparing. For example, column1 may be named AccountName and we have that as the top-level hierarchy with 'Yesterday' and 'Today' as columns below so comparison is easier to see.
 
 ```python
 # Function to highlight in yellow each change from Yesterday until Today so that it is digestible to anyone familiar with excel and not necessarily coders
@@ -60,7 +59,7 @@ print(len(variable))
 new_variable = variable.style.apply(highlight_diff, axis=None)
 new_variable
 ```
-Since this returns everything in our dataset, the next step is to filter for only the values that have changed between one time period and another.In this case, it is between yesterday and today.
+Since the function returns every row in our combined dataset, the next step is to eliminate any noise by filtering for only the values that changed between one time period and another.
 
 ```python
 x = []
@@ -80,10 +79,11 @@ y1.to_excel('filepath/name_' + timestr + '.xlsx')
 ```
 
 ### **Output**
-The output file header will look like the below screenshot. I have erased any sensitive data. A blank value under Yesterday but an active value Today means that data was uploaded yesterday and reflected today. The second image shows what the entire file looks like zoomed out. Yellow highlights are data changes.
+The resulting output will look like the below screenshot. I have erased any sensitive data and only included the first 10 rows. A blank value under Yesterday but an active value Today means that data was uploaded yesterday and we can see it reflected in our system of record today.
 ![image1](/assets/img/ComparisonOutputClose.PNG)
-![image2](/assets/img/ComparisonOutputFar.PNG)
 
+The second image shows what the entire file looks like zoomed out. Yellow highlights are data changes.
+![image2](/assets/img/ComparisonOutputFar.PNG)
 
 ### **Conclusion**
 This is an important first step in identifying changes to data and can be used in a multitude of situations. I've used this to track many different changes over many different time periods. If you can identify what changed then it is easier to implement processes to eliminate changes altogether or to report up and answer the ultimate question that X change because of y, z reasons.
