@@ -44,15 +44,15 @@
       }
     } // end .p-wrap
 
-//     time {
-//       color: darken($main-color, 20%);
-//       display: inline-block;
-//       padding-right: $spacing-s;
-//       width: 155px;
-//       @media (max-width: 942px) {
-//         display: block;
-//         width: auto;
-//       }
+    time {
+      color: darken($main-color, 20%);
+      display: inline-block;
+      padding-right: $spacing-s;
+      width: 155px;
+      @media (max-width: 942px) {
+        display: block;
+        width: auto;
+      }
     }
 
     a {
