@@ -1,3 +1,4 @@
+### **Background**
 This project helped me answer the frequent business question, "What was X value yesterday, last week, last quarter, last year?"
 
 Reasons for why data changes are numerous yet managers and executives always wonder what is the cause? Arriving at the root cause for why values change within financial data is important since financial data is time series based. For example, if a past $10 transaction now shows $11, that could pose big problems. The case for most things in financial reporting is that many smaller components add to one final reporting metric. Risks to FSLI, auditing support, among many other concerns are all reasons that tracking changes is an important tool. This technique is step one in the problem-solving process. How are you supposed to determine a root cause if you don't know where to start or which underlying number changed?
