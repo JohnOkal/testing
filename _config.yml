@@ -25,7 +25,7 @@ github: johnokal
 # Other (refer to http://jekyllrb.com/docs/home/ for further details on the below)
 
 markdown: kramdown
-permalink: pretty
+permalink: /:title/
 plugins:
   - jekyll-paginate
 
