@@ -80,7 +80,8 @@ y1.to_excel('filepath/name_' + timestr + '.xlsx')
 ```
 
 ### **Output**
-Our output file header will look like the below screenshot.
+The output file header will look like the below screenshot.
+![image1](/assets/ComparisonOutputClose.png)
 
 
 ### **Conclusion**
