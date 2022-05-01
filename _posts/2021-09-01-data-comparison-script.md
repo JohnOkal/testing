@@ -1,0 +1,3 @@
+This project helped me answer the frequent business question, "What was X value yesterday, last week, last quarter, last year?"
+
+Reasons for why data changes or can be changed are numerous yet executives and managers always wonder what is the cause? Arriving at the root cause for why values change within financial data is important since finance is a time series. If a value happened in the past and it was a $10 transaction and it now shows $11, that could pose big problems. Risk to FSLI, auditing support, among many other concerns are all reasons to be able to track and monitor adverse changes.
