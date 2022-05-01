@@ -80,8 +80,9 @@ y1.to_excel('filepath/name_' + timestr + '.xlsx')
 ```
 
 ### **Output**
-The output file header will look like the below screenshot.
-![image1](/assets/ComparisonOutputClose.png)
+The output file header will look like the below screenshot. I have erased any sensitive data. A blank value under Yesterday but an active value Today means that data was uploaded yesterday and reflected today. The second image shows what the entire file looks like zoomed out. Yellow highlights are data changes.
+![image1](/assets/img/ComparisonOutputClose.PNG)
+![image2](/assets/img/ComparisonOutputFar.PNG)
 
 
 ### **Conclusion**
