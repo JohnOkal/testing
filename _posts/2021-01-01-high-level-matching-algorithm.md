@@ -1,4 +1,4 @@
 ---
-title: Matching Alogrithm
+title: Matching Algorithm
 permalink: /:Matching Algorithm/
 ---
