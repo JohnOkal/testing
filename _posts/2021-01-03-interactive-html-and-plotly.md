@@ -150,4 +150,6 @@ with open(f"YOUR FILEPATH", 'a') as f:
     f.write(fig3.to_html(full_html=False, include_plotlyjs='cdn'))
     f.write(fig4.to_html(full_html=False, include_plotlyjs='cdn'))
 ```
-[LINK TO FINISHED FILE]({{ site.baseurl }}{% link /assets/Portfolio_Graphs.html %})
+
+### **Example Output File**
+[LINK TO EXAMPLE FILE]({{ site.baseurl }}{% link /assets/Portfolio_Graphs.html %})
