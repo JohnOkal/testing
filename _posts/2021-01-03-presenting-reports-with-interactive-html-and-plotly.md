@@ -20,7 +20,7 @@ from datetime import datetime, timedelta
 # Enter Months to update columns header names below
 month0 = 'March'
 month1 = 'February'
-``
+```
 Note: there were many other inputs needed but I simplified the above to only compare two months of revenue data.
 
 ```python
