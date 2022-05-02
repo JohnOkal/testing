@@ -3,7 +3,7 @@ title: Python, Domo API, SQL, Google Sheets Integration
 permalink: /:Python, Domo API, SQL, Google Sheets Integration/
 ---
 
-The versatility of Python allows for incredible data transformations across systems what seemed like disparate systems. Using Python as the container to accomplish this task. Below, I will show different pieces of different scripts that can all be combined to create a data ETL.
+The versatility of Python allows for incredible data transformations across systems that seemed disparate. I use Python as the driver to accomplish this task. Below, I will show pieces of different scripts that can combine to create a data ETL.
 
 ### **Connect to Domo API**
 ```python
@@ -50,34 +50,34 @@ Now that we have successfully connected to the Domo API, how do we extract infor
 ### **SQL in Python**
 ```python
 # SQL Query to pull data
-dataset_id = 'DATAFLOW ID HERE'
+dataset_id = 'DOMO DATAFLOW ID HERE'
 data_query = f"""
 SELECT      DATEDIFF(Month,'1899-12-30') AS Month 
 ,           BillableAccountName 
 ,           Case When ... Then ... 
             Else ... End AS Column2
-,           Sum(`Revenue`) as Revenue
+,           Sum(`Column4`) as Column4
 FROM        `DATAFLOW ID HERE`
-WHERE       Month BETWEEN '2021-02-01' AND '2023-01-31' AND Revenue != 0 
+WHERE       Month BETWEEN '2021-02-01' AND '2023-01-31' AND Column4 != 0 
 GROUP BY    Column1,Column2,Column3
 ORDER BY    Column1,Column2,Column3
 """
 
-# Download data from Domo
+# Download data from Domo and assign to a variable
 # 'd' below is the alias on the import not shown here that we use the above code block to access
 df1 = d.download(dataset_id, data_query)
 ```
-Once data is downloaded, we can transform as much as we need before exporting to a Google Sheet for further modeling. Common things that I do at this step is merge with another dataset from a different system that doesn't have an API, for example. Adding columns, pivoting, filtering, altering any informational fields are all easier to manage in a Jupyter Notebook so that the entire data flow is automated.
+Once data is downloaded, we can transform as much as we need before exporting to a Google Sheet for further modeling. Common things that I do at this step is merge with another dataset from a different system that doesn't have an API. Adding columns, pivoting, filtering, altering any informational fields are all easier to manage in a Jupyter Notebook so that the entire dataflow is automated for future use.
 
 ### **Send to Google Sheets**
 ```python
 import pygsheets
 
-# Note: must setup a google developer account and get your unique credentials
+# Note: must set up a google developer account and get your unique credentials
 gc = pygsheets.authorize(service_file='C:/python_credentials.json')
 sh = gc.open('GOOGLE SHEET NAME')
 
-# I commonly delete a sheet and then add it back. Formulas remain in tact on other tabs.
+# I commonly delete a sheet and then add it back. Formulas remain intact on other tabs.
 wks1 = sh.worksheet_by_title('WORKSHEET1 NAME')
 wks1 = sh.del_worksheet(wks1)
 wks1 = sh.add_worksheet('WORKSHEET1 NAME')
